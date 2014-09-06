@@ -1,0 +1,29 @@
+{
+  "name": "node-radamsa",
+  "version": "0.0.0",
+  "description": "Radamsa from your node",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skepticfx/node-radamsa"
+  },
+  "keywords": [
+    "radamsa",
+    "fuzzer",
+    "fuzzing",
+    "security"
+  ],
+  "author": "Ahamed Nafeez <ahamed.nafeez@gmail.com> (http://blog.skepticfx.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skepticfx/node-radamsa/issues"
+  },
+  "homepage": "https://github.com/skepticfx/node-radamsa",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  }
+}
