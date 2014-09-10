@@ -1,5 +1,6 @@
 var sh = require('execsync');
-
+var xstream = require('node-xstream');
+var events = require('events');
 
 // Check whether Radamsa exist
 
@@ -25,4 +26,19 @@ exports.run = function(){
   });
   var ret = sh(command);
 return ret;
+}
+
+// Pipe the buffer data into stdin and then to radamsa
+// echo '<Buffer Data>' | radamsa
+exports.fromBuffer = function(buf){
+  var EE = new events.EventEmitter;
+  buf = new Buffer(buf);
+  var spawn = require('child_process').spawn;
+  var radamsa = spawn('radamsa');
+  radamsa.stdin.write(buf);
+  radamsa.stdin.end();
+  EE = radamsa.stdout;
+
+
+return EE;
 }
