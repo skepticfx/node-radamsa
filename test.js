@@ -14,7 +14,7 @@ describe('basic test', function(){
     this.timeout(4000);
 
     var ret = radamsa.fromBuffer(new Buffer([0x01, 0x02, 0x03, 0x04]));
-    ret.on('data', function(data){
+    ret.once('data', function(data){
       assert(data instanceof Buffer);
       done();
     });
