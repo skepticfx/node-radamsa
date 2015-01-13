@@ -6,6 +6,6 @@ branches:
     - master
 before_install:
   curl http://haltp.org/download/radamsa-0.4.tar.gz \
-  | tar -zxvf - && cd radamsa-0.4 && make && sudo make install
+  | tar -zxvf - && cd radamsa-0.4 && make && sudo make install && cd ..
 script:
   npm test
