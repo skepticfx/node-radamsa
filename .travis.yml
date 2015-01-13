@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 0.10
+branches:
+  only:
+    - master
+before_install:
+  curl http://haltp.org/download/radamsa-0.4.tar.gz \
+  | tar -zxvf - && cd radamsa-0.4 && make && sudo make install
+script:
+  npm test

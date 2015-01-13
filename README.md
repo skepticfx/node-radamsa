@@ -1,9 +1,11 @@
 node-radamsa
 =============
 
-### A simple, synchronous, pipe to Radamsa tool from your nodejs programs.
+ A synchronous pipe to Radamsa tool from your nodejs programs.
 
-## Usage
+ PS: You need to have the radamsa command line tool, already installed.
+
+### Usage
 
 ### Including in your program
 ````
@@ -17,7 +19,7 @@ var radamsa = require('node-radamsa');
 var fuzzed = radamsa.run('file_name', '-n', '10');
 ````
 
-## License
+### License
 
 The MIT License (MIT)
 
