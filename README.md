@@ -5,6 +5,8 @@ node-radamsa
 
  PS: You need to have the radamsa command line tool, already installed.
 
+[![Build Status](https://travis-ci.org/skepticfx/node-radamsa.svg?branch=master)](https://travis-ci.org/skepticfx/node-radamsa)
+
 ### Usage
 
 ### Including in your program
