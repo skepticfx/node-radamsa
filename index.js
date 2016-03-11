@@ -1,7 +1,9 @@
-var sh = require('execsync');
+var execSync = require('child_process').execSync;
 var xstream = require('node-xstream');
 var events = require('events');
-
+var sh = function(){
+  return execSync([].slice.apply(arguments)).toString();
+}
 // Check whether Radamsa exist
 
 var version = sh('radamsa -V');
@@ -12,7 +14,7 @@ if(version.indexOf('Radamsa') !== 0){
 
 
 function pleaseInstall(){
-  console.log('Seems like we couldn\'t detect Radamsa on this computer.');
+  console.log('Seems like we couldn\'t detect Radamsa in this system.');
   console.log('Please install the radamsa command line tool from https://code.google.com/p/ouspg/wiki/Radamsa');
   process.exit(1);
 }
