@@ -4,7 +4,7 @@
   "description": "Radamsa from your node",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test.js"
+    "test": "./node_modules/mocha/bin/mocha ./test.js"
   },
   "repository": {
     "type": "git",
