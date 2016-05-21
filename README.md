@@ -3,7 +3,8 @@ node-radamsa
 
  A synchronous pipe to Radamsa tool from your nodejs programs.
 
- PS: You need to have the radamsa command line tool, already installed. [https://code.google.com/p/ouspg/wiki/Radamsa]
+ PS: You need to have the radamsa command line tool, already installed. 
+ Get it here : https://github.com/aoh/radamsa
 
 [![Build Status](https://travis-ci.org/skepticfx/node-radamsa.svg?branch=master)](https://travis-ci.org/skepticfx/node-radamsa)
 
