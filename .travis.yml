@@ -6,5 +6,6 @@ branches:
     - master
 before_install:
   git clone https://github.com/aoh/radamsa.git && cd radamsa && make && sudo make install
+  npm install mocha -D
 script:
   npm test
