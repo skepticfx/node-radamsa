@@ -5,6 +5,6 @@ branches:
   only:
     - master
 before_install:
-  git clone https://github.com/aoh/radamsa.git && cd radamsa && make && sudo make install && exit
+  git clone https://github.com/aoh/radamsa.git && cd radamsa && make && sudo make install
 script:
   npm test
