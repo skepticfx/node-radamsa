@@ -24,7 +24,7 @@ exports.run = function(){
   var args = [].slice.apply(arguments);
   var command = 'radamsa';
   args.forEach(function(x){
-    command += " "+ x;
+    command += " \"" + x + "\"";
   });
   var ret = sh(command);
 return ret;
