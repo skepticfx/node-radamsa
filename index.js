@@ -2,7 +2,7 @@ var execSync = require('child_process').execSync;
 var xstream = require('node-xstream');
 var events = require('events');
 var sh = function(){
-  return execSync([].slice.apply(arguments)).toString();
+  return execSync([].slice.apply(arguments), {'stdio': 'pipe'}).toString();
 }
 // Check whether Radamsa exist
 
@@ -26,21 +26,16 @@ exports.run = function(){
   args.forEach(function(x){
     command += " \"" + x + "\"";
   });
-  var ret = sh(command);
-return ret;
+return sh(command); 
 }
 
 // Pipe the buffer data into stdin and then to radamsa
 // echo '<Buffer Data>' | radamsa
 exports.fromBuffer = function(buf){
-  var EE = new events.EventEmitter;
-  buf = new Buffer(buf);
   var spawn = require('child_process').spawn;
-  var radamsa = spawn('radamsa');
+  var radamsa = spawn('radamsa', [], {'stdio': 'pipe'});
+  buf = new Buffer(buf);
   radamsa.stdin.write(buf);
   radamsa.stdin.end();
-  EE = radamsa.stdout;
-
-
-return EE;
+return radamsa.stdout;
 }

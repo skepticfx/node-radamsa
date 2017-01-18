@@ -1,6 +1,6 @@
 {
   "name": "node-radamsa",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Radamsa from your node",
   "main": "index.js",
   "scripts": {
